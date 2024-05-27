@@ -41,3 +41,11 @@ class Solution:
             high -= 1
         return " ".join(l)
 
+# Solution-2 - Second approach with list reversal
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        import re
+        # remove extra spaces between words and leading & training spaces
+        s = re.sub(" +", " ", s)
+        l = s.split()
+        return " ".join(l[::-1])
