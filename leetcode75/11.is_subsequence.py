@@ -34,6 +34,9 @@ class Solution:
         return True
                 
 # Solution-2 - 2-pointer approach TC O(n)
+'''
+Check if fp == sp then forward both fp & sp else sp. Finally check if we covered all chars of s by len(s) == fp
+'''
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         fp = sp = 0
