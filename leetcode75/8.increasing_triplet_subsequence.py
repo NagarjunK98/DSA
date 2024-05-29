@@ -69,4 +69,4 @@ class Solution:
                 second_ele = nums[i]
             else:
                 return True
-        return False 
+        return False
