@@ -12,4 +12,6 @@ for i in str(value):
 l1 = [1,2,3,4]
 l2 = [5,6,7,8]
 res = [*l1, *l2]
+or
+res = l1 + l2
 print(res) # output - [1,2,3,4,5,6,7,8]
