@@ -48,15 +48,11 @@ Algorithm steps
 '''
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
-        import sys
-        if len(nums) == k:
-            return sum(nums)/k
-        else:
-            max_avg = sum(nums[0:k])/k
-            prev_sum = sum(nums[0:k])
-            for i in range(1,len(nums)-k+1):
-                prev_sum = prev_sum-nums[i-1]+nums[i+k-1]
-                new_avg = prev_sum/k
-                if new_avg > max_avg:
-                    max_avg = new_avg
-            return max_avg
+        max_avg = sum(nums[0:k])/k
+        prev_sum = sum(nums[0:k])
+        for i in range(1,len(nums)-k+1):
+            prev_sum = prev_sum-nums[i-1]+nums[i+k-1]
+            new_avg = prev_sum/k
+            if new_avg > max_avg:
+                max_avg = new_avg
+        return max_avg
