@@ -74,7 +74,7 @@ Algo steps:
     1. First create an empty array of length n and initialize last element of array to last element of original array
     2. From the right side, loop through each index and find max till that index and store it
     3. Init i=0, & j=0
-    4. Loop through i<n and j<n, and check if a[i] < new_array[j] if yes i++ else j++ and find max(new_array[j]-a[i]) 
+    4. Loop through i<n and j<n, and check if a[i] < new_array[j] if yes i++ else j++ and find max(a[j]-a[i]) 
 
 TC=O(N)
 SC=O(N)
