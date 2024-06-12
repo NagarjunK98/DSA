@@ -45,3 +45,30 @@ class Solution:
                 del d[arr[i]]
                 del d[sum-arr[i]]
         return count if count > 0 else -1
+
+# Solution -2 Optimized approach
+'''
+Algo steps:
+    1. Init low=0, high=n-1
+    2. Loop through list till low < high and check a[low]+a[high]=sum then count else if a[low]+a[high] < sum then low++ else high--
+    3. return count if count > 0 else -1
+
+TC = O(N)
+SC = O(1)
+'''
+class Solution:
+    def Countpair (self, arr, n, sum) : 
+        #Complete the function
+        low = 0
+        high = n-1
+        count = 0        
+        while low < high:
+            if arr[low]+arr[high] == sum:
+                count += 1
+                low += 1
+                high -= 1
+            elif arr[low]+arr[high] < sum:
+                low += 1
+            else:
+                high -= 1
+        return count if count > 0 else -1
