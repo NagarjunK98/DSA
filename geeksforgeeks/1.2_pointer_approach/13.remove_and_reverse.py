@@ -45,3 +45,31 @@ class Solution:
             else:
                 i+=1
         return "".join(l) 
+
+# Solution -2 Time limit exceeded (1110/1115) test cases
+class Solution:
+    def removeReverse(self, S): 
+        from collections import Counter
+        l = list(S)
+        counter = Counter(l)
+        low = 0
+        high = 0
+        flag = 1
+        while low < len(l) and high < len(l):
+            if flag ==1:
+                if counter[l[low]] > 1:
+                    counter[l[low]] -= 1
+                    l.remove(l[low])
+                    l = l[::-1]
+                    flag = 2
+                else:
+                    low += 1
+            else:
+                if counter[l[high]] > 1:
+                    counter[l[high]] -= 1
+                    l.remove(l[high])
+                    l = l[::-1]
+                    flag = 1
+                else:
+                    high += 1
+        return "".join(l)

@@ -52,3 +52,7 @@ for k, v in od.items():
 # Output:
 # a 1
 # b 2
+
+
+# Heap queue - priority queue
+https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/
