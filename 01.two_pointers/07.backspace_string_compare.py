@@ -24,22 +24,17 @@ Output: true
 # Solution-1: Stack implementation. TC=O(N) & SC=O(N)
 class Solution:
     def backspaceCompare(self, s: str, t: str) -> bool:
-        src = []
-        tgt = []
-        for i in s:
-            if i == '#':
-                if len(src) == 0:
-                    continue
+        def process_string(s):
+            l = []
+            for i in s:
+                if i == '#':
+                    if len(l) == 0:
+                        continue
+                    else:
+                        l.pop()
                 else:
-                    src.pop()
-            else:
-                src.append(i)
-        for i in t:
-            if i == '#':
-                if len(tgt) == 0:
-                    continue
-                else:
-                    tgt.pop()
-            else:
-                tgt.append(i)
-        return "".join(src) == "".join(tgt)
+                    l.append(i)
+            
+            return "".join(l)
+    
+        return process_string(s) == process_string(t)
