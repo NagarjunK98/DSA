@@ -35,3 +35,13 @@ print("Sort based on dict value in asc: ", d_value_sort)
 
 d_value_sort_desc = sorted(d.items(), key = lambda x: x[1][0], reverse=True)
 print("Sort based on dict value in desc: ", d_value_sort_desc)
+
+
+'''
+Let's say we have nested list, sort based on nested value
+'''
+
+l = [[3,5], [5,3], [0,1]]
+
+l_sort = sorted(l, key = lambda x: x[1])
+print("Nested list sorted based on nested value", l_sort)
