@@ -44,8 +44,6 @@ res = generator(N)
 print(next(res)) # return 1
 print(next(res)) # return 2
 print(next(res)) # return StopIteration exception
-for ele in res:
-
 
 # Another way
 def generator(N):
